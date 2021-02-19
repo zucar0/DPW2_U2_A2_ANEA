@@ -22,7 +22,7 @@
                     <a class="nav-link" href="registro.html">Registro</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link disabled" href="login.html" tabindex="-1" aria-disabled="false">Login</a>
+                    <a class="nav-link" href="login.html">Login</a>
                   </li>
                 </ul>
               </div>
@@ -37,10 +37,11 @@
     su respectiva verificación). La matricula no debe repetirse y será la llave primaria. 
      -->
     <section class="formulario">
-        <form >
+        <form id="form1" action="guardar.php" method="post">
             <div class="form-group etiquetas">
               <label for="formGroupExampleInput">Matrícula</label>
-              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Escribe tu matrícula">
+              <input name="matricula" type="text" id="matricula formGroupExampleInput" class="form-control" 
+              value="" placeholder="Escribe tu matrícula" required>
             </div>
             <div class="form-group etiquetas">
               <label for="formGroupExampleInput2">Nombre</label>
