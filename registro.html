@@ -30,8 +30,7 @@
           </nav>
     </section>
     <h1 class="tituloH1">Registro de estudiantes</h1>
-
-        <!-- En el apartado Registro, diseñarás un formulario que permita el registro de un
+    <!-- En el apartado Registro, diseñarás un formulario que permita el registro de un
     usuario nuevo, el cual tendrá los siguientes datos: matricula, nombre,
     apellidoPaterno, apellidoMaterno, sexo, edad, telefono, email y contraseña (y
     su respectiva verificación). La matricula no debe repetirse y será la llave primaria. 
@@ -39,50 +38,49 @@
     <section class="formulario">
         <form id="form1" action="guardar.php" method="post">
             <div class="form-group etiquetas">
-              <label for="formGroupExampleInput">Matrícula</label>
-              <input name="matricula" type="text" id="matricula formGroupExampleInput" class="form-control" 
-              value="" placeholder="Escribe tu matrícula" required>
+              <label for="matricula">Matrícula</label>
+              <input name="matricula" type="text" id="matricula" class="form-control" value="" placeholder="Escribe tu matrícula" required>
             </div>
             <div class="form-group etiquetas">
-              <label for="formGroupExampleInput2">Nombre</label>
-              <input name="nombre" type="text" class="form-control" id="nombre formGroupExampleInput2" value="" required placeholder="Escribe tu nombre">
+              <label for="nombre">Nombre</label>
+              <input name="nombre" type="text" class="form-control" id="nombre" value="" placeholder="Escribe tu nombre" required>
             </div>
             <div class="form-group etiquetas">
-                <label for="formGroupExampleInput">Apellido paterno</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Escribe tu apellido paterno">
+                <label for="apaterno">Apellido paterno</label>
+                <input name="apaterno" type="text" class="form-control" id="apaterno" placeholder="Escribe tu apellido paterno" required>
               </div>
               <div class="form-group etiquetas">
-                <label for="formGroupExampleInput2">Apellido materno</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Escribe tu apellido materno">
+                <label for="amaterno">Apellido materno</label>
+                <input name="amaterno" type="text" class="form-control" id="amaterno" placeholder="Escribe tu apellido materno" required>
               </div>
               <div class="form-check form-check-inline etiquetas">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1">Femenino</label>
+                <input class="form-check-input" type="checkbox" id="sexo" value="F">
+                <label name="sexo" class="form-check-label" for="inlineCheckbox1">Femenino</label>
               </div>
               <div class="form-check form-check-inline etiquetas">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">Masculino</label>
+                <input class="form-check-input" type="checkbox" id="sexo" value="M">
+                <label name="sexo" class="form-check-label" for="inlineCheckbox2">Masculino</label>
               </div>
               <div class="form-group etiquetas">
-                <label for="formGroupExampleInput">Edad</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Escribe tu edad">
+                <label for="edad">Edad</label>
+                <input name="edad" type="text" class="form-control" id="edad" placeholder="Escribe tu edad" required>
               </div>
               <div class="form-group etiquetas">
-                <label for="formGroupExampleInput">Teléfono</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Escribe tu teléfono">
+                <label for="telefono">Teléfono</label>
+                <input name="telefono" type="text" class="form-control" id="telefono" placeholder="Escribe tu teléfono" required>
               </div>
               <div class="form-group etiquetas">
-                <label for="exampleInputEmail1">Email address</label>
-                <input name="email" type="email" class="form-control" id="email exampleInputEmail1" required value="" aria-describedby="emailHelp" placeholder="Ingresa tu email">
+                <label for="email">Email address</label>
+                <input name="email" type="email" class="form-control" id="email exampleInputEmail1" value="" aria-describedby="emailHelp" placeholder="Ingresa tu email" required>
                 <small id="emailHelp" class="form-text text-muted">Nosotros no vamos a compartir tu correo con terceros.</small>
               </div>
               <div class="form-group etiquetas">
-                <label for="exampleInputPassword1">Password</label>
-                <input name="password" type="password" class="form-control" id="password exampleInputPassword1" placeholder="Password"required >
+                <label for="contrasena">Contraseña</label>
+                <input name="contrasena" type="password" class="form-control" id="contrasena" placeholder="Password" required>
               </div>
               <div class="form-group etiquetas">
-                <label for="exampleInputPassword1">Confirmación del Password</label>
-                <input name="confirma" type="password" class="form-control" id="confirma exampleInputPassword1" placeholder="Confirmanos tu password" required>
+                <label for="confirma">Confirmación de la Contraseña</label>
+                <input name="confirma" type="password" class="form-control" id="confirma" placeholder="Confirmanos tu password" required>
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
           </form>
