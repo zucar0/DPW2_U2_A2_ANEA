@@ -27,11 +27,10 @@
 
     $stmt->execute();
     echo "El registro del alumno $nombre $apaterno $amaterno se realizó con éxito.";
-    // $sql= "INSERT INTO usuarios(matricula,nombre, apaterno, amaterno, tipousuario, sexo, edad, telefono, email, contrasena) VALUES($matricula,$nombre,$apaterno,$amaterno,$tipousuario,$sexo,$edad,$telefono,$email,$contrasena)";
-    // $conn->exec($sql);
-    echo "New record created successfully";
+    echo "<br><br><a href='index.php'><img with="104px" src='atras.jpg'></a>";
+    $conn = null;
     }catch(PDOException $e){
         echo $sql . "<br>" . $e->getMessage();
     }
-    $conn = null;
+    
 ?>

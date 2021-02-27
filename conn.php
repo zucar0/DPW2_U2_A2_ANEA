@@ -15,11 +15,11 @@ try{
     echo '<h1>Ocurrió un errordurante la conexión';
 
 }
-
-$rows = $conn -> query("select nombre from usuarios");
-while($row = $rows->fetch()){
-    echo $row['nombre']."<br>";
-}
+//Código para ver todo en db
+// $rows = $conn -> query("select nombre from usuarios");
+// while($row = $rows->fetch()){
+//     echo $row['nombre']."<br>";
+// }
 
 //INSERT INTO `usuarios` (`matricula`, `nombre`, `apaterno`, `amaterno`, `tipousuario`, `sexo`, `edad`, `telefono`, `email`, `contrasena`) VALUES ('PRUEBA01', 'Antonio', 'Enriquez', 'Alvarado', 'E', 'M', '33', '5579134671', 'enriquez_alvarado@nube.unadmexico.mx', 'holamundo123'), ('PRUEBA02', 'jUANITO', 'Perez', 'Lara', 'E', 'M', '40', '123456789', 'mail@mail.com', '123456jajaja');
 
