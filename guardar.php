@@ -1,5 +1,5 @@
-<?
-   include "conexion.php";
+<?php
+   include "conn.php";
    $matricula=$_POST['matricula']; 
    $nombre=$_POST['nombre'];  
    $apaterno=$_POST['apaterno'];
@@ -11,26 +11,27 @@
    $contrasena=$_POST['contrasena'];
    $confirma=$_POST['confirma'];   
    $tipousuario='E';
-   if($dbh!=null)   
-   {    
-	$stmt = $dbh-> prepare("INSERT INTO usuarios (matricula, nombre, apaterno, amaterno, tipousuario, sexo, edad, telefono, email, contrasena) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bindParam(1, $matricula);	 
-    $stmt->bindParam(2, $nombre); 
-    $stmt->bindParam(3, $apaterno); 	
-    $stmt->bindParam(4, $amaterno); 
-    $stmt->bindParam(5, $tipousuario); 
-    $stmt->bindParam(6, $sexo); 
-    $stmt->bindParam(7, $edad); 
-    $stmt->bindParam(8, $telefono);
-    $stmt->bindParam(9, $email);	
-    $stmt->bindParam(10, $contrasena); 
-    $stmt->execute();
 
+   try{
+    $stmt = $conn->prepare("INSERT INTO usuarios VALUES(:matricula, :nombre, :apaterno, :amaterno, :tipousuario, :sexo, :edad, :telefono, :email, :contrasena)");
+    $stmt->bindValue(':matricula', $matricula);
+    $stmt->bindValue(':nombre', $nombre);
+    $stmt->bindValue(':apaterno', $apaterno);
+    $stmt->bindValue(':amaterno', $amaterno);
+    $stmt->bindValue(':tipousuario', $tipousuario);
+    $stmt->bindValue(':sexo', $sexo);
+    $stmt->bindValue(':edad', $edad);
+    $stmt->bindValue(':telefono', $telefono);
+    $stmt->bindValue(':email', $email);
+    $stmt->bindValue(':contrasena', $contrasena);
+
+    $stmt->execute();
     echo "El registro del alumno $nombre $apaterno $amaterno se realizó con éxito.";
-    echo "<br><br><a href='index.php'><img src='atras.jpg'></a>";
-    $dbh=null;
-    }   else  {
-    echo "No hay conexión con la base de datos."; 
-    echo "<br><br><a href='index.php'><img src='atras.jpg'></a>";	
-    }  
+    // $sql= "INSERT INTO usuarios(matricula,nombre, apaterno, amaterno, tipousuario, sexo, edad, telefono, email, contrasena) VALUES($matricula,$nombre,$apaterno,$amaterno,$tipousuario,$sexo,$edad,$telefono,$email,$contrasena)";
+    // $conn->exec($sql);
+    echo "New record created successfully";
+    }catch(PDOException $e){
+        echo $sql . "<br>" . $e->getMessage();
+    }
+    $conn = null;
 ?>

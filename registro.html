@@ -36,7 +36,7 @@
     su respectiva verificación). La matricula no debe repetirse y será la llave primaria. 
      -->
     <section class="formulario">
-        <form id="form1" action="guardar.php" method="post">
+        <form id="form1" action="guardar.php" method="POST">
             <div class="form-group etiquetas">
               <label for="matricula">Matrícula</label>
               <input name="matricula" type="text" id="matricula" class="form-control" value="" placeholder="Escribe tu matrícula" required>
@@ -79,8 +79,8 @@
                 <label for="confirma">Confirmación de la Contraseña</label>
                 <input name="confirma" type="password" class="form-control" id="confirma" placeholder="Confirmanos tu password" required>
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" name="enviar" value="guardar" class="btn btn-primary">Guardar</button>
           </form>
-    </section>
+    </section>  
 </body>
 </html>
