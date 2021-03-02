@@ -12,6 +12,9 @@
    $confirma=$_POST['confirma'];   
    $tipousuario='E';
    $error_encontrado="";
+// $strongPassword = preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$%^&]).*$/');
+    $regex = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$%^&]).*$/"
+
 
    function validar_clave($contrasena,&$error_clave){
     if(strlen($contrasena) < 8){
@@ -34,9 +37,11 @@
        $error_clave = "La contraseña debe tener al menos un caracter numérico";
        return false;
     }
-    if (preg_match('/^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,15}$/', $contrasena)){
-        return true;
-    }
+    // if (!preg_match($regex, $contrasena)){
+    //     $error_clave = "La contraseña debe tener al menos un caracter especial";
+
+    //     return false;
+    // }
     $error_clave = "";
     return true;
  }
