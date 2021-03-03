@@ -1,24 +1,34 @@
 <?php
+   $contrasena=$_POST['contrasena'];
+   $matricula=$_POST['matricula']; 
    $host       ="localhost";
    $dbname     = "id16129776_progweb2";
    $user       = "id16129776_antonioenriquez";
    $password   ="zjo_%H=)I6S/s1fm";
-   $contrasena=$_POST['contrasena'];
-   $matricula=$_POST['matricula']; 
+   session_start();
+   //Se crea variable de sesión
+   $_SESSION['matricula'] = $matricula;
 
-//Conexión a la base de datos
-$conexion=mysqli_connect("localhost", $user, $password, $dbname );
-$consulta="SELECT * FROM usuarios WHERE matricula='$matricula' and contrasena='$contrasena'";
-$resultado=mysqli_query($conexion, $consulta);
-$filas=mysqli_num_rows($resultado);
+   //Conexión a la base de datos
+   $conexion=mysqli_connect("localhost", $user, $password, $dbname );
+   $consulta="SELECT * FROM usuarios WHERE matricula='$matricula' and contrasena='$contrasena'";
+   $resultado=mysqli_query($conexion, $consulta);
+   //Aquí se almacena el resultado de la consulta
+   $filas=mysqli_fetch_array($resultado);
 
-if($filas>0){
-   header("location: bienvenido.html");
-}else{
-   echo"Error al autenticarse";
-}
-mysqli_free_result($resultado);
-mysqli_close($conexion);
+   //Con el array vamos a identificar el Rol de Estudiante o Admin
+   //Administrador
+   if($filas['tipousuario']=="A"){
+      header("Location:admin.php");
+      // header("location: bienvenido.html");
+   }else if($filas['tipousuario']=="E"){
+      header("Location:estudiante.php");
+   }
+   else{
+      echo"Error al autenticarse";
+   }
+   mysqli_free_result($resultado);
+   mysqli_close($conexion);
 
    //    try{
          
