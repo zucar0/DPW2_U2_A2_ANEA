@@ -1,28 +1,45 @@
-   <?php
-      try{
-         $host       ="localhost";
-         $dbname     = "id16129776_progweb2";
-         $user       = "id16129776_antonioenriquez";
-         $password   ="zjo_%H=)I6S/s1fm";
-         $conn2 = new PDO("mysql:host=$host;dbname=$dbname",$user,$password);
-         $conn2->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-         echo '<h1>Conectado a la base de datos</h1>';
-     
-     }catch(PDOException $e){
-         echo $e->getMessage();
-         echo '<h1>Ocurrió un errordurante la conexión';
-     
-     }
+<?php
+   $host       ="localhost";
+   $dbname     = "id16129776_progweb2";
+   $user       = "id16129776_antonioenriquez";
+   $password   ="zjo_%H=)I6S/s1fm";
+   $contrasena=$_POST['contrasena'];
+   $matricula=$_POST['matricula']; 
 
-     $contrasena=$_POST['contrasena'];
-     $matricula=$_POST['matricula']; 
+//Conexión a la base de datos
+$conexion=mysqli_connect("localhost", $user, $password, $dbname );
+$consulta="SELECT * FROM usuarios WHERE matricula='$matricula' and contrasena='$contrasena'";
+$resultado=mysqli_query($conexion, $consulta);
+$filas=mysqli_num_rows($resultado);
 
-     //Código para ver todo en db
-     $rows = $conn2 -> query("select matricula, nombre, apaterno, amaterno, tipousuario from usuarios WHERE matricula=? AND contrasena=?", $matricula, $contrasena);
-     $result = $rows->fetchAll();
-     while($row = $rows->fetch()){
-         echo $row['nombre']. " ". $row['apaterno']."<br>";
-     }
+if($filas>0){
+   header("location: bienvenido.html");
+}else{
+   echo"Error al autenticarse";
+}
+mysqli_free_result($resultado);
+mysqli_close($conexion);
+
+   //    try{
+         
+   //       $conn2 = new PDO("mysql:host=$host;dbname=$dbname",$user,$password);
+   //       $conn2->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+   //       echo '<h1>Conectado a la base de datos</h1>';
+     
+   //   }catch(PDOException $e){
+   //       echo $e->getMessage();
+   //       echo '<h1>Ocurrió un errordurante la conexión';
+     
+   //   }
+
+    
+
+   //   //Código para ver todo en db
+   //   $rows = $conn2 -> query("select matricula, nombre, apaterno, amaterno, tipousuario from usuarios WHERE matricula=? AND contrasena=?", $matricula, $contrasena);
+   //   $result = $rows->fetchAll();
+   //   while($row = $rows->fetch()){
+   //       echo $row['nombre']. " ". $row['apaterno']."<br>";
+   //   }
 
 
 
