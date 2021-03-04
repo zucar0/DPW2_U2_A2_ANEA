@@ -8,6 +8,15 @@
         echo 'No tiene autorización para ingresar';
         die();
     }
+    // include "conn.php";
+    // $stmt = $conn->prepare("SELECT * FROM calificaciones WHERE matricula=:matricula");
+    // $stmt->bindParam(':matricula', $variableSesion);
+    // $stmt-> setFetchMode(PDO::FETCH_ASSOC);
+    // $stmt->execute();
+    // $datos=$stmt->fecth();
+    // printf("%s is in district %s\n", $variableSesion, $datos);
+    // $stmt->close();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +24,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estudiante</title>
+    <title>Consultas calificaciones</title>
     <link rel="stylesheet" href="estilos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
@@ -33,7 +42,7 @@
                     <a class="nav-link" href="estudiante.php">Inicio</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="consulta.php">Consultar</a>
+                    <a class="nav-link" href="consultar.php">Consultar</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="cerrar_sesion.php">Salir</a>
@@ -43,8 +52,8 @@
             </div>
           </nav>
     </section>
-    <h1>Matrícula <?php echo $_SESSION['matricula'] ?> </h1>
-    <h2>¡Bienvenido <?php echo  $_SESSION['nombre'] ?> <?php  $_SESSION['apaterno']?> <?php $_SESSION['amaterno'] ?>!</h2>  
-    <h3>¡Has ingresado como  <?php echo $_SESSION['tipousuario']?>studiante.</h3>
+    <h2>Matrícula: <?php echo $_SESSION['matricula'] ?> </h2>
+    <h2>Nombre: <?php echo  $_SESSION['nombre'] ?> <?php  $_SESSION['apaterno']?> <?php $_SESSION['amaterno'] ?>!</h2>  
+    <h3>Tus calificaciones son: </h3>
 </body>
 </html>

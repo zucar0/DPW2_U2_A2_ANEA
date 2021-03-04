@@ -18,12 +18,13 @@
    $_SESSION['apaterno'] = $filas['apaterno'];
    $_SESSION['amaterno'] = $filas['amaterno'];
    $_SESSION['tipousuario'] = $filas['tipousuario'];
+   $_SESSION['inicio'] =$filas['tipousuario'];
    //Con el array vamos a identificar el Rol de Estudiante o Admin
    //Administrador
-   if($filas['tipousuario']=="A"){
+   if($_SESSION['inicio']=="A"){
       header("Location:admin.php");
       // header("location: bienvenido.html");
-   }else if($filas['tipousuario']=="E"){
+   }else if($_SESSION['inicio']=="E"){
       header("Location:estudiante.php");
    }
    else{
