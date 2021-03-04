@@ -1,3 +1,14 @@
+<?php
+    //Reanudamos la sesión
+    session_start();
+    //Se evita ver errores en la página
+    error_reporting(0);
+    $variableSesion = $_SESSION['matricula'];
+    if($variableSesion ==null || $variableSesion =''){
+        echo 'No tiene autorización para ingresar';
+        die();
+    } 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,5 +19,8 @@
 </head>
 <body>
     <h1>Hola administrador.</h1>
+    <?php echo $_SESSION['matricula'] ?>
+    <?php echo $filas['nombre'] ?>
+    
 </body>
 </html>
