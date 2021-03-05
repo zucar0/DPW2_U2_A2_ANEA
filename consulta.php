@@ -55,5 +55,6 @@
     <h2>Matrícula: <?php echo $_SESSION['matricula'] ?> </h2>
     <h2>Nombre: <?php echo  $_SESSION['nombre'] ?> <?php  $_SESSION['apaterno']?> <?php $_SESSION['amaterno'] ?>!</h2>  
     <h3>Tus calificaciones son: </h3>
+    <p><?php echo $_SESSION['prog'] ?></p>
 </body>
 </html>
