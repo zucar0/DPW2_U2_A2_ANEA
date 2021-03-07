@@ -29,7 +29,6 @@
    $_SESSION['so']=$filasCalificaciones['so'];
    $_SESSION['bd']=$filasCalificaciones['bd'];
    //Con el array vamos a identificar el Rol de Estudiante o Admin
-   
    //Administrador
    if($_SESSION['inicio']=="A"){
       header("Location:admin.php");

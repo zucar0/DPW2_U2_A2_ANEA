@@ -47,3 +47,16 @@ table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
   }
+  .calificaciones{
+      background: #e6fdfd;
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .tablaAdmin{
+    border:1;
+    background: violet;
+    color: tomato;
+    margin-left: auto;
+    margin-right: auto;
+  }

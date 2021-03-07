@@ -12,7 +12,7 @@ try{
 
 }catch(PDOException $e){
     echo $e->getMessage();
-    echo '<h1>Ocurrió un errordurante la conexión';
+    echo '<h1>Ocurrió un error durante la conexión';
 
 }
 //Código para ver todo en db
