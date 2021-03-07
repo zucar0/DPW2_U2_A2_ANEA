@@ -45,6 +45,43 @@
           </nav>
     </section>
 <section class="calificaciones">
+    <h3>Registro de calificaciones</h3>
+    <section class="formulario">
+        <form id="form1" action="guardarCalificacion.php" method="POST">
+            <div class="form-group etiquetas">
+              <label for="matricula">Matrícula</label>
+              <input name="matricula" type="text" id="matricula" class="form-control" value="" placeholder="Escribe la matrícula">
+            </div>
+            <div class="form-group etiquetas">
+              <label for="prog">Programación</label>
+              <input name="prog" type="text" class="form-control" id="prog" value="" placeholder="Programación">
+            </div>
+            <div class="form-group etiquetas">
+                <label for="mate">Matemáticas</label>
+                <input name="mate" type="text" class="form-control" id="mate" placeholder="Matemáticas" required>
+              </div>
+              <div class="form-group etiquetas">
+                <label for="algo">Algoritmos</label>
+                <input name="algo" type="text" class="form-control" id="algo" placeholder="Algoritmos" required>
+              </div>
+              <div class="form-group etiquetas">
+                <label for="logi">Lógica</label>
+                <input name="logi" type="text" class="form-control" id="logi" placeholder="Lógica" required>
+              </div>
+              <div class="form-group etiquetas">
+                <label for="so">Sistemas Operativos</label>
+                <input name="so" type="text" class="form-control" id="so" placeholder="Sistemas Operativos" required>
+              </div>
+              <div class="form-group etiquetas">
+                <label for="bd">Bases de datos</label>
+                <input name="bd" type="text" class="form-control" id="bd" placeholder="Bases de datos" required>
+              </div>
+              <button type="submit" name="enviarCalificacion" value="evaluar" class="btn btn-primary">Evaluar</button>
+          </form>
+    </section>
+    
+    
+    
     <table class="tablaAdmin">
         <tr>
             <th>Matricula</th>
