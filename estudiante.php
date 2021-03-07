@@ -4,7 +4,8 @@
     //Se evita ver errores en la página
     error_reporting(0);
     $variableSesion = $_SESSION['matricula'];
-    if($variableSesion ==null || $variableSesion =''){
+    $tipoUsuario =   $_SESSION['tipousuario'];
+    if($variableSesion ==null || $variableSesion ='' || $tipoUsuario == 'A'){
         echo 'No tiene autorización para ingresar';
         die();
     }
@@ -26,14 +27,14 @@
     
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="admin.php">Inicio</a>
-                  </li>
+                  </li> -->
                   <li class="nav-item">
                     <a class="nav-link" href="estudiante.php">Inicio</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="consulta.php">Consultar</a>
+                    <a class="nav-link" href="estudiante.php">Consultar</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="cerrar_sesion.php">Salir</a>
@@ -45,6 +46,28 @@
     </section>
     <h1>Matrícula <?php echo $_SESSION['matricula'] ?> </h1>
     <h2>¡Bienvenido <?php echo  $_SESSION['nombre'] ?> <?php  $_SESSION['apaterno']?> <?php $_SESSION['amaterno'] ?>!</h2>  
-    <h3>¡Has ingresado como  <?php echo $_SESSION['tipousuario']?>studiante.</h3>
+    <h3>¡Has ingresado como  <?php echo $_SESSION['tipousuario']?>studiante!</h3>
+    <br>
+    <div>
+        <h3 class="tituloTabla">Calificaciones</h3>
+        <table class="tablaEstudiante">
+            <tr>
+                <td><strong>Programación</strong></td>
+                <td><strong>Matemáticas</strong></td>
+                <td><strong>Algoritmos</strong></td>
+                <td><strong>Lógica</strong></td>
+                <td><strong>Sistemas operativos</strong></td>
+                <td><strong>Bases de datos</strong></td>
+            </tr>
+            <tr>
+                <td><?php echo $_SESSION['prog']?></td>
+                <td><?php echo $_SESSION['mate']?></td>
+                <td><?php echo $_SESSION['algo']?></td>
+                <td><?php echo $_SESSION['logi']?></td>
+                <td><?php echo $_SESSION['so']?></td>
+                <td><?php echo $_SESSION['bd']?></td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>

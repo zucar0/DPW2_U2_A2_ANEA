@@ -8,15 +8,6 @@
         echo 'No tiene autorización para ingresar';
         die();
     }
-    // include "conn.php";
-    // $stmt = $conn->prepare("SELECT * FROM calificaciones WHERE matricula=:matricula");
-    // $stmt->bindParam(':matricula', $variableSesion);
-    // $stmt-> setFetchMode(PDO::FETCH_ASSOC);
-    // $stmt->execute();
-    // $datos=$stmt->fecth();
-    // printf("%s is in district %s\n", $variableSesion, $datos);
-    // $stmt->close();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
