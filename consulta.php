@@ -4,7 +4,7 @@
     //Se evita ver errores en la página
     error_reporting(0);
     $variableSesion = $_SESSION['matricula'];
-    if($variableSesion ==null || $variableSesion =''){
+    if($variableSesion ==null || $variableSesion ='' || $tipoUsuario == 'A'){
         echo 'No tiene autorización para ingresar';
         die();
     }
