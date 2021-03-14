@@ -52,12 +52,12 @@
         <h3 class="tituloTabla">Calificaciones</h3>
         <table class="tablaEstudiante">
             <tr>
-                <td><strong>Programación</strong></td>
-                <td><strong>Matemáticas</strong></td>
-                <td><strong>Algoritmos</strong></td>
-                <td><strong>Lógica</strong></td>
-                <td><strong>Sistemas operativos</strong></td>
-                <td><strong>Bases de datos</strong></td>
+                <td><strong>Prog</strong></td>
+                <td><strong>Mate</strong></td>
+                <td><strong>Algo</strong></td>
+                <td><strong>Lógi</strong></td>
+                <td><strong>SO</strong></td>
+                <td><strong>BD</strong></td>
             </tr>
             <tr>
                 <td><?php echo $_SESSION['prog']?></td>
