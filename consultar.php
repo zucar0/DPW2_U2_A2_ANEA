@@ -48,12 +48,12 @@
     <table class="tablaAdmin">
         <tr>
             <th>Matricula</th>
-            <th>Programación</th>
-            <th>Matemáticas</th>
-            <th>Algoritmos</th>
-            <th>Lógica</th>
-            <th>Sistemas Operativos</th>
-            <th>Bases de datos</th>
+            <th>Prog</th>
+            <th>Mate</th>
+            <th>Algo</th>
+            <th>Lógi</th>
+            <th>SO</th>
+            <th>BD</th>
         </tr>
         <?php
             $contrasena=$_POST['contrasena'];
