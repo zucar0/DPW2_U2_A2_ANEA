@@ -22,27 +22,19 @@
 </head>
 <body class="text-info bg-dark">
 <section class="barra">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-    
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <!-- <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="admin.php">Inicio</a>
-                  </li> -->
-                  <li class="nav-item">
-                    <a class="nav-link" href="estudiante.php">Inicio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="estudiante.php">Consultar</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="cerrar_sesion.php">Salir</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+    <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light bg-light fixed-top">
+      <a href="/index.html" class="navbar-brand"><img src="/assets/logoUnADM.png" width="15%" alt="UNADM"></a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" style="margin-right: 35%;" id="navbarCollapse">
+        <div class="navbar-nav">
+            <a href="estudiante.php" class="nav-item nav-link active fs-2">Inicio</a>
+            <a href="estudiante.php" class="nav-item nav-link active fs-2">Consultar</a>
+            <a href="cerrar_sesion.php" class="nav-item nav-link fs-2">Salir</a>
+        </div>
+      </div>
+    </nav>
     </section>
     <h1>Matrícula <?php echo $_SESSION['matricula'] ?> </h1>
     <h2>¡Bienvenido <?php echo  $_SESSION['nombre'] ?> <?php  $_SESSION['apaterno']?> <?php $_SESSION['amaterno'] ?>!</h2>  
