@@ -18,31 +18,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrador</title>
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-</head>
+ </head>
 <body class="text-info bg-dark">
     <section class="barra">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-    
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="admin.php">Inicio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="evaluar.php">Evaluar</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="consultar.php">Consultar</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="cerrar_sesion.php">Salir</a>
-                  </li>
-                </ul>
-              </div>
+        <nav class="navbar navbar-expand-lg navbar-expand-md navbar-light bg-light fixed-top">
+          <a href="/index.html" class="navbar-brand"><img src="/assets/logoUnADM.png" width="15%" alt="UNADM"></a>
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" style="margin-right: 35%;" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="admin.php" class="nav-item nav-link active fs-2">Inicio</a>
+                <a href="evaluar.php" class="nav-item nav-link fs-2">Evaluar</a>
+                <a href="consultar.php" class="nav-item nav-link fs-2">Consultar</a>
+                <a href="cerrar_sesion.php" class="nav-item nav-link fs-2">Salir</a>
+
             </div>
-          </nav>
+          </div>
+        </nav>
     </section>
     <section>
         <h1 class="tituloH1">Universidad Abierta y a Distancia de México</h1>
