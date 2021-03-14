@@ -3,7 +3,9 @@
     justify-content: center;
     background-color:#f8f9fa;
 }
-
+.primeraSeccion{
+    padding-top: 100px;
+}
 .tituloH1{
     padding: 250px;
     text-align: center;
