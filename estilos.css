@@ -8,6 +8,14 @@
     padding: 250px;
     text-align: center;
 }
+.tituloH1Registro{
+    padding-top: 150px;
+    text-align: center;
+}
+.tituloH1Login{
+    padding-top: 55px;
+    text-align: center;
+}
 .formulario{
     margin-top: 2vw;
     padding-left: 1.5vw;
